@@ -58,6 +58,8 @@
     
     var textvh = $(window).innerHeight() * 0.28; // 5.33 vh
     
+
+    window.onresize = function(){ location.reload(); }
     
     const createBlotterText = () => {
         const text = new Blotter.Text(textEl.innerHTML, {
