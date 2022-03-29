@@ -56,7 +56,7 @@
     const elem = document.querySelector('.content__text');
     const textEl = elem.querySelector('span.content__text-inner');
     
-    var textvh = $(window).innerHeight() * 0.28; // 5.33 vh
+    var textvh = $(window).innerHeight() * 0.224; // 5.33 vh
     
 
     window.onresize = function(){ location.reload(); }
