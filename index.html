@@ -26,18 +26,28 @@
 			
  
 			
-			
+			<div id="container" class="container">
+				<div id="scene" class="scene">
 				<div class="content__img-wrap">
-					<div class="content__img"></div>
-					<div class="content__img"></div>
-					<div class="content__img"></div>
-					<div class="content__img"></div>
+					<div class="content__img" data-depth="1.00"></div>
+					<div class="content__img" data-depth="0.80"></div>
+					<div class="content__img" data-depth="0.60"></div>
+					<div class="content__img"data-depth="0.40"></div>
 					
 				</div>
 				
-				<div id="blotter"></div>
+				<div id="blotter" data-depth="0.20"></div>
 				<div class="content__text"><span class="content__text-inner gradient-text" data-gradient-text-range="636264, 302f35" halign="center">ten twenty</span></div>
+			</div>
+			</div>
+			<script src="src/parallax.js"></script>
+			<script>
+
+				// Pretty simple huh?
+				var scene = document.getElementById('scene');
+				var parallax = new Parallax(scene);
 			
+				</script>
 		</main>
 		<script src="js/blotter.min.js"></script>
         <script src="js/materials/liquidDistortMaterial.js"></script>
