@@ -30,7 +30,9 @@
     const calcWinsize = () => winsize = {width: window.innerWidth, height: window.innerHeight};
     calcWinsize();
     window.addEventListener('resize', calcWinsize);
+    function debounce(a,b,c){var d;return function(){var e=this,f=arguments;clearTimeout(d),d=setTimeout(function(){d=null,c||a.apply(e,f)},b),c&&!d&&a.apply(e,f)}}
 
+    
     const getMousePos = (ev) => {
         let posx = 0;
         let posy = 0;
@@ -49,6 +51,7 @@
     let mousePos = {x: winsize.width/2, y: winsize.height/2};
     window.addEventListener('mousemove', ev => mousePos = getMousePos(ev));
 
+  
     const imgs = [...document.querySelectorAll('.content__img')];
     const imgsTotal = imgs.length;
     let imgTranslations = [...new Array(imgsTotal)].map(() => ({x: 0, y: 0}));
@@ -56,7 +59,7 @@
     const elem = document.querySelector('.content__text');
     const textEl = elem.querySelector('span.content__text-inner');
     
-    var textvh = $(window).innerHeight() * 0.224; // 5.33 vh
+    var textvh = $(window).innerHeight() * 0.227; // 5.33 vh
     
 
     window.onresize = function(){ location.reload(); }
@@ -66,7 +69,7 @@
             family : "'Righteous', 'url(Righteous-Regular.ttf)",
             weight: 900,
             size : textvh,
-            fill: '#282830',
+            fill: '#554f41',
             
             
         });
