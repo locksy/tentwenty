@@ -266,8 +266,8 @@ a:focus {
 .content__img {
 	position: absolute;
 	top: -25%;
-	left: center;
-	width: 100%;
+	left: 15%;
+	width: 75%;
 	height: 150%;
 	background: url(../img/door.png) no-repeat 100% 100%;
 	background-size: cover;
