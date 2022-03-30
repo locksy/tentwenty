@@ -8,6 +8,8 @@
  * Copyright 2019, Codrops
  * http://www.codrops.com
  */
+ window.onresize = function(){ location.reload(); }
+
  {
     const body = document.body;
     const docEl = document.documentElement;
@@ -30,9 +32,7 @@
     const calcWinsize = () => winsize = {width: window.innerWidth, height: window.innerHeight};
     calcWinsize();
     window.addEventListener('resize', calcWinsize);
-    function debounce(a,b,c){var d;return function(){var e=this,f=arguments;clearTimeout(d),d=setTimeout(function(){d=null,c||a.apply(e,f)},b),c&&!d&&a.apply(e,f)}}
 
-    
     const getMousePos = (ev) => {
         let posx = 0;
         let posy = 0;
@@ -45,41 +45,33 @@
             posx = ev.clientX + body.scrollLeft + docEl.scrollLeft;
             posy = ev.clientY + body.scrollTop + docEl.scrollTop;
         }
-        else if (ev.clientX || ev.clientY) 	{
-            posx = leftToRight + body.scrollLeft + docEl.scrollLeft;
-            posy = frontToBack + body.scrollTop + docEl.scrollTop;
         return {x: posx, y: posy};
     }
 
     let mousePos = {x: winsize.width/2, y: winsize.height/2};
     window.addEventListener('mousemove', ev => mousePos = getMousePos(ev));
 
-    
-    
-  
     const imgs = [...document.querySelectorAll('.content__img')];
     const imgsTotal = imgs.length;
     let imgTranslations = [...new Array(imgsTotal)].map(() => ({x: 0, y: 0}));
 
     const elem = document.querySelector('.content__text');
     const textEl = elem.querySelector('span.content__text-inner');
-    
-    var textvh = $(window).innerHeight() * 0.227; // 5.33 vh
-    
 
-    window.onresize = function(){ location.reload(); }
-    
+    var textvh = $(window).innerHeight() * 0.22; // 5.33 vh
+
+
     const createBlotterText = () => {
         const text = new Blotter.Text(textEl.innerHTML, {
             family : "'Righteous', 'url(Righteous-Regular.ttf)",
             weight: 900,
             size : textvh,
             fill: '#554f41',
-            
-            
+
+
         });
         elem.removeChild(textEl);
-    
+
         const material = new Blotter.LiquidDistortMaterial();
         material.uniforms.uSpeed.value = 1.1;
         material.uniforms.uVolatility.value = 0.77;
@@ -87,15 +79,15 @@
         const blotter = new Blotter(material, {texts: text});
         const scope = blotter.forText(text);
         scope.appendTo(elem);
-        
+
         let lastMousePosition = {x: winsize.width/777, y: winsize.height/777};
         let volatility = 0;
-        
+
         const render = () => {
             const docScrolls = {left : body.scrollLeft + docEl.scrollLeft, top : body.scrollTop + docEl.scrollTop};
             const relmousepos = {x : mousePos.x - docScrolls.left, y : mousePos.y - docScrolls.top };
             const mouseDistance = MathUtils.distance(lastMousePosition.x, relmousepos.x, lastMousePosition.y, relmousepos.y);
-            
+
             volatility = MathUtils.lerp(volatility, Math.min(MathUtils.lineEq(0.9, 0, 100, 0, mouseDistance),0.9), 0.05);
             material.uniforms.uVolatility.value = volatility;
 
@@ -104,7 +96,7 @@
                 imgTranslations[i].y = MathUtils.lerp(imgTranslations[i].y, MathUtils.lineEq(40, -40, winsize.height, 0, relmousepos.y), i === imgsTotal - 1 ? 0.15 : 0.03*i + 0.03);
                 imgs[i].style.transform = `translateX(${(imgTranslations[i].x)}px) translateY(${imgTranslations[i].y}px)`;
             };
-    
+
             lastMousePosition = {x: relmousepos.x, y: relmousepos.y};
             requestAnimationFrame(render);
         }
@@ -120,4 +112,4 @@
 
     // Preload all the images in the page.
     imagesLoaded(document.querySelectorAll('.content__img'), {background: true}, () => body.classList.remove('loading'));
-}
+} 
