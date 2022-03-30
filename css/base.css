@@ -265,7 +265,7 @@ a:focus {
 
 .content__img {
 	position: absolute;
-	top: -25%;
+	top: -7%;
 	left: 15%;
 	width: 75%;
 	height: 150%;
@@ -287,9 +287,9 @@ a:focus {
 .content__text {
 	position: relative;
 	font-size: 10em;
-	left: 0;
+	left: 2%;
     line-height: 50%;
-    margin-top: 7%;
+    margin-top: 20%;
     position: center;
     text-align: center;
     width: "auto";
