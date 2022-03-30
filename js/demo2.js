@@ -45,12 +45,16 @@
             posx = ev.clientX + body.scrollLeft + docEl.scrollLeft;
             posy = ev.clientY + body.scrollTop + docEl.scrollTop;
         }
+        else if (ev.clientX || ev.clientY) 	{
+            posx = leftToRight + body.scrollLeft + docEl.scrollLeft;
+            posy = frontToBack + body.scrollTop + docEl.scrollTop;
         return {x: posx, y: posy};
     }
 
     let mousePos = {x: winsize.width/2, y: winsize.height/2};
     window.addEventListener('mousemove', ev => mousePos = getMousePos(ev));
 
+    
     
   
     const imgs = [...document.querySelectorAll('.content__img')];
