@@ -51,6 +51,7 @@
     let mousePos = {x: winsize.width/2, y: winsize.height/2};
     window.addEventListener('mousemove', ev => mousePos = getMousePos(ev));
 
+    
   
     const imgs = [...document.querySelectorAll('.content__img')];
     const imgsTotal = imgs.length;
