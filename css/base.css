@@ -247,8 +247,8 @@ a:focus {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	display: flex;
 	flex-direction: column;	
-	width: "device-width";
-	height: "device-height";
+	width: "auto";
+	height: "auto";
 	position: center;
 	justify-content: top;
 	
@@ -267,7 +267,7 @@ a:focus {
 	position: absolute;
 	top: -25%;
 	left: center;
-	width = "device-width";
+	width: 100%;
 	height: 150%;
 	background: url(../img/door.png) no-repeat 100% 100%;
 	background-size: cover;
@@ -292,8 +292,8 @@ a:focus {
     margin-top: 7%;
     position: center;
     text-align: center;
-    width: "device-width";
-	data-gradient-text-range="FF0000, AA1100,FF7700,FF4400,FFDD00,FFBB11,00FF00,55AA00,0000FF,000055,8A2BE2,310062,C77DF3,4B0082"
+    width: "auto";
+	
 	
 	
 }
@@ -354,8 +354,7 @@ a:focus {
 }
 
 
-@media screen and (min-width:800px) {
-	/* And even larger */
+
 }
 @media screen and (min-width: 480px) {
 	.message {
