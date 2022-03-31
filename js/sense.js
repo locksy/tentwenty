@@ -149,7 +149,7 @@
           options = {
             threshold: 50,
             direction: "both",
-            gestureDuration: 200
+            gestureDuration: 900
           },
           args = getArgs(arguments, options),
           lastSample,
