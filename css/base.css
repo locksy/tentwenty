@@ -193,6 +193,7 @@ a:focus {
 	
 	
 	width: 100%;
+	max-width: 1072px;
 	height: 150%;
 	background: url(../img/door.png) no-repeat 100% 100%;
 	background-size: cover;
