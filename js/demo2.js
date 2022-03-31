@@ -81,7 +81,7 @@
         scope.appendTo(elem);
 
         let lastMousePosition = {x: winsize.width, y: winsize.height};
-        let volatility = 1;
+        let volatility = 2;
 
         const render = () => {
             const docScrolls = {left : body.scrollLeft + docEl.scrollLeft, top : body.scrollTop + docEl.scrollTop};

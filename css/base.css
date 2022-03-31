@@ -184,14 +184,11 @@ a:focus {
 	
 	padding: 3em;
     display: grid;
-    grid-gap: 2em;
-    grid-template-columns: repeat(auto-fit, minmax(250px));position: absolute;
-	top: -6%;
+   
+	
 	margin: auto;
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
-	
-	
 	width: 100%;
 	max-width: 1072px;
 	height: 150%;
@@ -213,15 +210,15 @@ a:focus {
 
 .content__text {
 	position: relative;
-	font-size: 10em;
+	font-size: 50%;
 	
-    position: absolute;
+    
     text-align: center;
     
     width:100%;
 	margin: auto;
 	position: absolute;
-	top: 0; left: 0; bottom: 0; right: 0;
+	top: 33%; left: 0; bottom: 0; right: 0;
 
 
 }
@@ -310,7 +307,7 @@ a:focus {
 		width: 100%;
 		max-width: none;
 		height: 100vh;
-		padding: 3rem;
+		padding: 0rem;
 		pointer-events: none;
 		grid-template-columns: 100% 100%;
 		grid-template-rows: auto auto auto;
