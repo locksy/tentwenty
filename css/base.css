@@ -184,7 +184,12 @@ a:focus {
     grid-gap: 2em;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));position: absolute;
 	top: -6%;
-	left: 10%;
+	
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	
+	
 	width: 75%;
 	height: 150%;
 	background: url(../img/door.png) no-repeat 100% 100%;
@@ -225,8 +230,8 @@ a:focus {
 .grid {
 	display: grid;
 	padding: 1rem;
-	margin: 50 auto;
-	grid-template-columns: 1128px;
+	margin:  auto;
+	grid-template-columns: auto;
 	grid-row-gap: 4rem;
 	grid-column-gap: 20vw;
 	max-width: 100%;

@@ -80,8 +80,8 @@
         const scope = blotter.forText(text);
         scope.appendTo(elem);
 
-        let lastMousePosition = {x: winsize.width/777, y: winsize.height/777};
-        let volatility = 0;
+        let lastMousePosition = {x: winsize.width, y: winsize.height};
+        let volatility = 1;
 
         const render = () => {
             const docScrolls = {left : body.scrollLeft + docEl.scrollLeft, top : body.scrollTop + docEl.scrollTop};
