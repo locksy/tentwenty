@@ -24,6 +24,7 @@ and (max-device-width : 1024px) {
 }
 
 body {
+	touch-action: pan-x pan-y;
 	overflow: hidden;
 	--color-text: #3b3d42;
     --color-bg: #000000;
@@ -155,6 +156,7 @@ a:focus {
 }
 
 .content {
+	touch-action: pan-x pan-y;
 	padding: 3em;
     display: grid;
     grid-gap: 2em;
@@ -182,6 +184,7 @@ a:focus {
 
 .content__img {
 	
+	touch-action: pan-x pan-y;
 	padding: 3em;
     display: grid;
    
