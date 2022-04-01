@@ -5,10 +5,23 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 
 @media only screen 
 and (min-device-width : 320px) 
-and (max-device-width : 1024px) {
-.listcontainer {
-    width: 100%;
-    height: 100%;
+ {
+	.content__img {
+	
+		touch-action: pan-x pan-y;
+			margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 0; right: 0;
+		width: 100%;
+		
+		height: 150%;
+		background: url(../img/doorlowres.jpg) no-repeat 100% 100%;
+		background-size: cover;
+		opacity: 0.5;
+		will-change: transform;
+		transform: translate(-50%, -50%);
+		overflow: hidden;
+	}
 }
 }
 
@@ -158,9 +171,8 @@ a:focus {
 .content {
 	touch-action: pan-x pan-y;
 	padding: 3em;
-    display: grid;
-    grid-gap: 2em;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    
+    
 	display: flex;
 	flex-direction: column;
 	width: 100%;
@@ -175,25 +187,20 @@ a:focus {
 	display: flex;
 
 	width: auto;
-	height: 100%;
+	
 	overflow: hidden;
-	margin: auto;
-	position: absolute;
+	
 	top: 0; left: 0; bottom: 0; right: 0;
 }
 
 .content__img {
 	
 	touch-action: pan-x pan-y;
-	padding: 3em;
-    display: grid;
-   
-	
-	margin: auto;
+		margin: auto;
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
 	width: 100%;
-	max-width: 1072px;
+	
 	height: 150%;
 	background: url(../img/door.png) no-repeat 100% 100%;
 	background-size: cover;

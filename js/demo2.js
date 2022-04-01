@@ -58,7 +58,7 @@
     const elem = document.querySelector('.content__text');
     const textEl = elem.querySelector('span.content__text-inner');
 
-    var textvh = $(window).innerHeight() * 0.22; // 5.33 vh
+    var textvh = $(window).innerHeight() * 0.20; // 5.33 vh
 
 
     const createBlotterText = () => {
