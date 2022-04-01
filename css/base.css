@@ -12,9 +12,9 @@ and (min-device-width : 320px)
 			margin: auto;
 		position: absolute;
 		top: 0; left: 0; bottom: 0; right: 0;
-		width: 75%;
+		width: 100%;
 		width: calc(var(--element-width) * 1px);
-		height: 75%;
+		height: 150%;
 		background: url(../img/doorlowres.jpg) no-repeat 100% 100%;
 		background-size: cover;
 		opacity: 0.5;
@@ -170,7 +170,7 @@ a:focus {
 
 .content {
 	touch-action: pan-x pan-y;
-	padding: 25em;
+	padding: 3em;
     
     
 	display: flex;
