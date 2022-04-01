@@ -8,8 +8,11 @@
  * Copyright 2019, Codrops
  * http://www.codrops.com
  */
- window.onresize = function(){ location.reload(); }
-
+ 
+window.onresize = function(){ location.reload(); }
+if(window.innerHeight > window.innerWidth){
+    alert("Please use Landscape!");
+}
  {
     const body = document.body;
     const docEl = document.documentElement;
