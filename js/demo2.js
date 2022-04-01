@@ -8,7 +8,8 @@
  * Copyright 2019, Codrops
  * http://www.codrops.com
  */
- window.onresize = function(){ location.reload(); }
+ 
+window.onresize = function(){ location.reload(); }
 
  {
     const body = document.body;
