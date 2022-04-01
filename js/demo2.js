@@ -8,8 +8,7 @@
  * Copyright 2019, Codrops
  * http://www.codrops.com
  */
- 
-window.onresize = function(){ location.reload(); }
+ window.onresize = function(){ location.reload(); }
 
  {
     const body = document.body;
@@ -59,13 +58,13 @@ window.onresize = function(){ location.reload(); }
     const elem = document.querySelector('.content__text');
     const textEl = elem.querySelector('span.content__text-inner');
 
-    var textvh = $(window).innerHeight() * 0.20; // 5.33 vh
+    var textvh = $(window).innerHeight() * 0.198; // 5.33 vh
 
 
     const createBlotterText = () => {
         const text = new Blotter.Text(textEl.innerHTML, {
             family : "'Righteous', 'url(Righteous-Regular.ttf)",
-            weight: 900,
+            weight: 1000,
             size : textvh,
             fill: '#554f41',
 
