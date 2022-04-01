@@ -175,7 +175,7 @@ a:focus {
     
 	display: flex;
 	flex-direction: column;
-	min-width: 200px
+	min-width: 200px;
 	height: 100%;
 	position: center;
 	justify-content: top;
