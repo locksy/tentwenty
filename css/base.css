@@ -170,7 +170,7 @@ a:focus {
 
 .content {
 	touch-action: pan-x pan-y;
-	padding: 3em;
+	padding: 25em;
     
     
 	display: flex;

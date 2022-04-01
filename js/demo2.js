@@ -77,7 +77,7 @@ if(window.innerHeight > window.innerWidth){
 
         const material = new Blotter.LiquidDistortMaterial();
         material.uniforms.uSpeed.value = 1.1;
-        material.uniforms.uVolatility.value = 1.77;
+        material.uniforms.uVolatility.value = 0.17;
         material.uniforms.uSeed.value = 1.7;
         const blotter = new Blotter(material, {texts: text});
         const scope = blotter.forText(text);
