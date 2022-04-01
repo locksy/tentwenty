@@ -23,6 +23,24 @@ and (min-device-width : 320px)
 		overflow: hidden;
 	}
 }
+.flex-column {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;  
+  }
+  
+  .flex-row {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;  
+  }
+  
+  .autoflex {
+	-webkit-flex: 1 1 auto;
+	flex: 1 1 auto;
+  }
 }
 
 {

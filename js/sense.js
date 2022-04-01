@@ -315,8 +315,8 @@
   Sense.prototype.addTiltScroll = function(optns) {
     if (window.DeviceOrientationEvent) {
       var options = optns == null ? {
-          maxHorizontalAngle: 80,
-          maxHorizontalOffset: 100,
+          maxHorizontalAngle: 15,
+          maxHorizontalOffset: 400,
           maxHorizontalSpeed: 15,
           maxVerticalAngle: 40,
           maxVerticalOffset: 100,
