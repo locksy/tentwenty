@@ -13,7 +13,8 @@ and (min-device-width : 320px)
 		position: absolute;
 		top: 0; left: 0; bottom: 0; right: 0;
 		width: 75%;
-		height: 200%;
+		width: calc(var(--element-width) * 1px);
+		height: 75%;
 		background: url(../img/doorlowres.jpg) no-repeat 100% 100%;
 		background-size: cover;
 		opacity: 0.5;
