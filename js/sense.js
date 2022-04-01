@@ -319,7 +319,7 @@
           maxHorizontalAngle: 80,
           maxHorizontalOffset: 100,
           maxHorizontalSpeed: 45,
-          maxVerticalAngle: 40,
+          maxVerticalAngle: 120,
           maxVerticalOffset: 50,
           maxVerticalSpeed: 75
         } : optns,
