@@ -11,7 +11,7 @@
  
 window.onresize = function(){ location.reload(); }
 if(window.innerHeight > window.innerWidth){
-    alert("Please turn your phone 45 degrees to use landscape mode.  Then tilt your phone left to right.");
+    alert("Please use landscape.  Then tilt your phone left or right to wiggle.");
 }
  {
     const body = document.body;

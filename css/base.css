@@ -15,7 +15,7 @@ and (min-device-width : 320px)
 		width: 320px;
 		
 		height: 150%;
-		background: url(../img/doorlowres.jpg) no-repeat 100% 100%;
+		background: url(../img/doorlowres.jpg) no-repeat;
 		background-size: cover;
 		opacity: 0.5;
 		will-change: transform;
