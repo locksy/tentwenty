@@ -18,13 +18,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<script>
 
-var sense = sense.init({
-      debug: true
-    });
-
-    sense.tiltScroll(function(data){
-
-    })
+			var sense = sense.init({});
+			sense.addTiltScroll()
+		
 		  </script>
 
 	</head>
@@ -32,7 +28,7 @@ var sense = sense.init({
 		<main>
 			
 			<div data-role="page">
-				<div role="main" class="ui-content">
+				<div role="main" class="ui-content" width="5000px" height="5000px" >
 				
 					<div class="content__img-wrap">
 					<div class="content__img"></div>

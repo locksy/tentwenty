@@ -11,7 +11,7 @@
  
 window.onresize = function(){ location.reload(); }
 if(window.innerHeight > window.innerWidth){
-    alert("Please turn your phone 45 degrees to use landscape mode.  Tilt your phone left to right.");
+    alert("Please turn your phone 45 degrees to use landscape mode, then tilt your phone left to right.");
 }
  {
     const body = document.body;
@@ -77,14 +77,14 @@ if(window.innerHeight > window.innerWidth){
 
         const material = new Blotter.LiquidDistortMaterial();
         material.uniforms.uSpeed.value = 1.1;
-        material.uniforms.uVolatility.value = 0.17;
-        material.uniforms.uSeed.value = 7.7;
+        material.uniforms.uVolatility.value = 0.77;
+        material.uniforms.uSeed.value = 0.7;
         const blotter = new Blotter(material, {texts: text});
         const scope = blotter.forText(text);
         scope.appendTo(elem);
 
         let lastMousePosition = {x: winsize.width, y: winsize.height};
-        let volatility = 7;
+        let volatility = 2;
 
         const render = () => {
             const docScrolls = {left : body.scrollLeft + docEl.scrollLeft, top : body.scrollTop + docEl.scrollTop};
