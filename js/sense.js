@@ -147,7 +147,7 @@
     if (window.DeviceOrientationEvent) {
       var callback,
           options = {
-            threshold: 70,
+            threshold: 170,
             direction: "both",
             gestureDuration: 900
           },
@@ -187,6 +187,7 @@
           };
           callback(data);
         }
+        
 
       })
     }
@@ -317,9 +318,9 @@
       var options = optns == null ? {
           maxHorizontalAngle: 80,
           maxHorizontalOffset: 100,
-          maxHorizontalSpeed: 15,
+          maxHorizontalSpeed: 45,
           maxVerticalAngle: 40,
-          maxVerticalOffset: 100,
+          maxVerticalOffset: 50,
           maxVerticalSpeed: 15
         } : optns,
         lastNormHAngle = 0,
