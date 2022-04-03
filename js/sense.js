@@ -319,8 +319,8 @@
           maxHorizontalOffset: 100%,
           maxHorizontalSpeed: 7,
           maxVerticalAngle: 15,
-          maxVerticalOffset: 150%,
-          maxVerticalSpeed: 3,
+          maxVerticalOffset: 500,
+          maxVerticalSpeed: 7,
         } : optns,
         lastNormHAngle = 0,
         lastNormVAngle = 0;
