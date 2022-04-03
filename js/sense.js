@@ -316,7 +316,7 @@
     if (window.DeviceOrientationEvent) {
       var options = optns == null ? {
           maxHorizontalAngle: 15,
-          maxHorizontalOffset: 100%,
+          maxHorizontalOffset: 100,
           maxHorizontalSpeed: 7,
           maxVerticalAngle: 15,
           maxVerticalOffset: 500,
