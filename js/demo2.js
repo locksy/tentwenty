@@ -70,7 +70,7 @@ if(window.innerHeight > window.innerWidth){
             weight: 1000,
             size : textvh,
             fill: '#554f41',
-
+        
 
         });
         elem.removeChild(textEl);

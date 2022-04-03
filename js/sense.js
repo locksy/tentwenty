@@ -317,10 +317,10 @@
       var options = optns == null ? {
           maxHorizontalAngle: 15,
           maxHorizontalOffset: 400,
-          maxHorizontalSpeed: 15,
+          maxHorizontalSpeed: 7,
           maxVerticalAngle: 15,
-          maxVerticalOffset: 1000,
-          maxVerticalSpeed: 15
+          maxVerticalOffset: 500,
+          maxVerticalSpeed: 7,
         } : optns,
         lastNormHAngle = 0,
         lastNormVAngle = 0;
