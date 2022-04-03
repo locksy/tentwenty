@@ -316,11 +316,11 @@
     if (window.DeviceOrientationEvent) {
       var options = optns == null ? {
           maxHorizontalAngle: 15,
-          maxHorizontalOffset: 400,
+          maxHorizontalOffset: 100%,
           maxHorizontalSpeed: 7,
           maxVerticalAngle: 15,
-          maxVerticalOffset: 500,
-          maxVerticalSpeed: 7,
+          maxVerticalOffset: 150%,
+          maxVerticalSpeed: 3,
         } : optns,
         lastNormHAngle = 0,
         lastNormVAngle = 0;
