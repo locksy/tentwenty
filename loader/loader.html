@@ -4,10 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>ten twenty radio</title>
-		
+        <script type="text/javascript">
+            var timerStart = Date.now();
+        </script>
 		<link rel="shortcut icon" href="favicon.png	">
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
-		<link rel="stylesheet" media='screen and (min-width: 200px) and (max-width: 400px)' href='css/basemobile.css' />
 		<script src="js/sense.js"></script>
 		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|IBM+Plex+Sans:500" rel="stylesheet">
@@ -24,28 +24,15 @@
 		  </script>
 	</head>
 	<body>
-		<main>
-			
-			<div data-role="page">
-				<div role="main" class="ui-content">
-				
-					<div class="content__img-wrap">
-					<div class="content__img"></div>
-					<div class="content__img"></div>
-					<div class="content__img"></div>
-					<div class="content__img"></div>
-					
-				
-				
-				<div id="blotter"></div>
-				<div class="content__text"><span class="content__text-inner">ten twenty</span></div>
-		
-			</div>
-		
-		</main>
-		<script src="js/blotter.min.js"></script>
-        <script src="js/materials/liquidDistortMaterial.js"></script>
-		<script src="js/imagesloaded.pkgd.min.js"></script>
-		<script src="js/demo2.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                console.log("Time until DOMready: ", Date.now()-timerStart);
+            });
+            $(window).load(function() {
+                console.log("Time until everything loaded: ", Date.now()-timerStart);
+            });
+       </script>
 	</body>
 </html>
+
+
