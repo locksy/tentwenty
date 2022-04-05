@@ -73,6 +73,16 @@ if(window.innerHeight > window.innerWidth){
         
 
         });
+
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+              createBlotterText.size = 60;
+            } 
+          var x = window.innerWidth > 768 ? 150 : 60;
+          myFunction(x) // Call listener function at run time
+          x.addListener(myFunction) // Attach listener function on state changes
+        };
+
         elem.removeChild(textEl);
 
         const material = new Blotter.LiquidDistortMaterial();
