@@ -205,8 +205,8 @@ a:focus {
 	background: url(../img/door.png) no-repeat 100% 100%;
 	background-size: cover;
 	opacity: 0.5;
-	will-change: transform;
-	transform: translate(-50%, -50%);
+	transform : translateZ(50px);
+	transform-style: preserve-3d;
 	overflow: hidden;
 }
 
