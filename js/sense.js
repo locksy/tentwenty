@@ -147,9 +147,9 @@
     if (window.DeviceOrientationEvent) {
       var callback,
           options = {
-            threshold: 100,
+            threshold: 25,
             direction: "both",
-            gestureDuration: 50
+            gestureDuration: 10
           },
           args = getArgs(arguments, options),
           lastSample,
