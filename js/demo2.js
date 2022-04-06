@@ -105,23 +105,16 @@ if(window.innerHeight > window.innerWidth){
         }
         return {x: posx, y: posy};
     }
-    handleMotionEvent = (handlemMotionEvent.addEventListener) ->
-  
-    x = handlemMotionEvent.addEventListener.accelerationIncludingGravity.x
-    y = handlemMotionEvent.addEventListener.accelerationIncludingGravity.y
-    z = handlemMotionEvent.addEventListener.accelerationIncludingGravity.z
-    
-    $(".x").text(Math.round(x))
-    $(".y").text(Math.round(y))
-    $(".z").text(Math.round(z))
-    
-    console.log("hi")
-    
-  
-  window.addEventListener("devicemotion", handleMotionEvent, true)
-  
-  handleMotionEvent()
-  console.log("hello")
+   
+    window.ondevicemotion = function(event) {
+        var accelerationX = event.accelerationIncludingGravity.x;
+        var accelerationY = event.accelerationIncludingGravity.y;
+        var accelerationZ = event.accelerationIncludingGravity.z;
+        let xdeg = posx;
+        let ydeg = posy;
+        
+     };
+
     let mousePos = {x: winsize.width/0.5, y: winsize.height/0.5};
     window.addEventListener('mousemove', ev => mousePos = getMousePos(ev));
 
