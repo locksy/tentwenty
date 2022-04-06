@@ -64,10 +64,10 @@ function deviceMotionHandler(evt) {
  intervalEl.children[1].innerHTML = interval;
 }
 
-// window.onresize = function(){ location.reload(); }
-// if(window.innerHeight > window.innerWidth){
-//   alert("Please use landscape.  Then tilt your phone left or right to wiggle.");
-//  }
+window.onresize = function(){ location.reload(); }
+if(window.innerHeight > window.innerWidth){
+    alert("Please use landscape.  Then tilt your phone left or right to wiggle.");
+}
  {
     const body = document.body;
     const docEl = document.documentElement;
@@ -133,7 +133,7 @@ function deviceMotionHandler(evt) {
             if (x.matches) { // If media query matches
               createBlotterText.size = 60;
             } 
-          var x = window.innerWidth > 768 ? 150 : 20;
+          var x = window.innerWidth > 768 ? 150 : 60;
           myFunction(x) // Call listener function at run time
           x.addListener(myFunction) // Attach listener function on state changes
         };
