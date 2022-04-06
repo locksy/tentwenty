@@ -183,14 +183,14 @@ a:focus {
 }
 
 .content__img-wrap {
-	
+	top: 0%;
 	display: flex;
 
 	width: auto;
 	
 	overflow: hidden;
 	
-	top: center; left: center; bottom: center; right: center;
+	top: 0; left: 0; bottom: 0; right: 0;
 }
 
 .content__img {
@@ -198,14 +198,15 @@ a:focus {
 	touch-action: pan-x pan-y;
 		margin: auto;
 	position: absolute;
-	top: 0; left: 0; bottom: 0; right: 0;
-	width: 150%;
+	top: 25%; left: 25%; bottom: 25%; right: 25%;
+	width: 100%;
 	
 	height: 150%;
 	background: url(../img/door.png) no-repeat 100% 100%;
 	background-size: cover;
 	opacity: 0.5;
-	
+	will-change: transform;
+	transform: translate(-50%, -50%);
 	overflow: hidden;
 }
 
