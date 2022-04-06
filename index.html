@@ -21,38 +21,14 @@
 			var sense = sense.init({});
 			sense.addTiltScroll()
 		
-			var posX = document.getElementById("pos-x"),
-    posY = document.getElementById("pos-y"),
-    posZ = document.getElementById("pos-z"),
-    card = document.getElementById("card-1")
-;
-
-window.addEventListener('deviceorientation', function(event) {
-  posX.innerHTML = event.beta;
-  posY.innerHTML = event.gamma;
-  posZ.innerHTML = event.alpha;
-  rotateElement(55-event.beta,event.gamma);
-  
-});
-
-window.addEventListener('mousemove', function(e) {
-  rotateElement(-((45 * (e.y - window.innerHeight/2)) / window.innerHeight/2),
-                (45 * (e.x - window.innerWidth/2)) / window.innerWidth/2);
-});
-
-function rotateElement(x,y){
-  card.style.transform = "rotateX("+x+"deg) rotateY("+y+"deg)";
-  card.style.webkitTransform = "rotateX("+x+"deg) rotateY("+y+"deg)";
-}
-
 		  </script>
 	</head>
 	<body>
 		<main>
 			
-			<div data-role="page" class="card-wrapper">
-				<div role="main" id="card-1" class="ui-content card">
-				<h1>
+			<div data-role="page">
+				<div role="main" class="ui-content">
+				
 					<div class="content__img-wrap">
 					<div class="content__img"></div>
 					<div class="content__img"></div>
@@ -69,7 +45,6 @@ function rotateElement(x,y){
 			  </div>
 			</div>
 		
-		</h1>
 		</main>
 		<script src="js/blotter.min.js"></script>
         <script src="js/materials/liquidDistortMaterial.js"></script>

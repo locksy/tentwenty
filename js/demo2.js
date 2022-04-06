@@ -9,6 +9,8 @@
  * http://www.codrops.com
  */
  
+
+
 window.onresize = function(){ location.reload(); }
 if(window.innerHeight > window.innerWidth){
     alert("Please use landscape.  Then tilt your phone left or right to wiggle.");
@@ -76,9 +78,9 @@ if(window.innerHeight > window.innerWidth){
 
         function myFunction(x) {
             if (x.matches) { // If media query matches
-              createBlotterText.size = 60;
+              createBlotterText.size = 10;
             } 
-          var x = window.innerWidth > 768 ? 150 : 60;
+          var x = window.innerWidth > 768 ? 150 : 10;
           myFunction(x) // Call listener function at run time
           x.addListener(myFunction) // Attach listener function on state changes
         };
@@ -98,7 +100,7 @@ if(window.innerHeight > window.innerWidth){
 
         const render = () => {
             const docScrolls = {left : body.scrollLeft + docEl.scrollLeft, top : body.scrollTop + docEl.scrollTop};
-            const relmousepos = {x : mousePos.x - docScrolls.left, y : mousePos.y - docScrolls.top };
+            const relmousepos = {x : alpha - docScrolls.left, y : beta - docScrolls.top };
             const mouseDistance = MathUtils.distance(lastMousePosition.x, relmousepos.x, lastMousePosition.y, relmousepos.y);
 
             volatility = MathUtils.lerp(volatility, Math.min(MathUtils.lineEq(0.9, 0, 100, 0, mouseDistance),0.9), 0.05);
