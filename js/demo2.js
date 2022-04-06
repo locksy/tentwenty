@@ -10,7 +10,59 @@
  */
  
 
- 
+ var orientationEl = document.getElementById('orientation'),
+ accelerationEl = document.getElementById('acceleration'),
+ accIncGravEl = document.getElementById('accincgrav'),
+ rotationEl = document.getElementById('rotation'),
+ intervalEl = document.getElementById('interval');
+
+if (window.DeviceOrientationEvent) {
+ window.addEventListener('deviceorientation', deviceOrientationHandler, false)
+}
+
+function deviceOrientationHandler(evt) {
+ var orientationData = evt;
+ // compass direction
+ orientationEl.children[1].innerHTML = evt.alpha;
+
+ // vertical tilt
+ orientationEl.children[3].innerHTML = evt.beta;
+
+ // horizontal tilt
+ orientationEl.children[5].innerHTML = evt.gamma;
+}
+
+if (window.DeviceMotionEvent) {
+ window.addEventListener('devicemotion', deviceMotionHandler, false);
+}
+
+function deviceMotionHandler(evt) {
+ var motionData = evt;
+ // acceleration
+ var evAcceleration = evt.acceleration;
+
+ accelerationEl.children[1].innerHTML = evAcceleration.x;
+ accelerationEl.children[3].innerHTML = evAcceleration.y;
+ accelerationEl.children[5].innerHTML = evAcceleration.z;
+
+ // acceleration including gravity
+ var accIncGravity = evt.accelerationIncludingGravity;
+
+ accIncGravEl.children[1].innerHTML = accIncGravity.x;
+ accIncGravEl.children[3].innerHTML = accIncGravity.y;
+ accIncGravEl.children[5].innerHTML = accIncGravity.z;
+
+ // rotation rate
+ var rotationRate = evt.rotationRate;
+
+ rotationEl.children[1].innerHTML = rotationRate.alpha;
+ rotationEl.children[3].innerHTML = rotationRate.beta;
+ rotationEl.children[5].innerHTML = rotationRate.gamma;
+
+ // interval
+ var interval = evt.interval;
+ intervalEl.children[1].innerHTML = interval;
+}
 
 window.onresize = function(){ location.reload(); }
 if(window.innerHeight > window.innerWidth){
@@ -48,13 +100,13 @@ if(window.innerHeight > window.innerWidth){
             posy = ev.pageY;
         }
         else if (ev.clientX || ev.clientY) 	{
-            posx = evt.beta + body.scrollLeft + docEl.scrollLeft;
-            posy = evt.gamma + body.scrollTop + docEl.scrollTop;
+            posx = ev.clientX + body.scrollLeft + docEl.scrollLeft;
+            posy = ev.clientY + body.scrollTop + docEl.scrollTop;
         }
         return {x: posx, y: posy};
     }
 
-    let mousePos = {x: winsize.width/2, y: winsize.height/2};
+    let mousePos = {x: winsize.width/0.5, y: winsize.height/0.5};
     window.addEventListener('mousemove', ev => mousePos = getMousePos(ev));
 
     const imgs = [...document.querySelectorAll('.content__img')];
